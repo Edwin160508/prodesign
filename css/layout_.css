@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+/*formatacao dos elementos html em relação a um grid fixo*/
+*,*::before,*::after{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+/*
+	--exemplo da regra @font-face
+
+	@font-face{
+	font-family:"Montserrat";
+	src: ur("../fontes/Montserrat-Regular.otf");
+	src: ur("../fontes/Montserrat-Bold.otf");
+	}
+
+*/
+
+body{
+	font-family: "Open Sans", sans-serif;
+	color: rgb(125,125,125);
+	background-color: rgb(225,225,225);
+}
+
+/*formatacao do elemento header*/
+div#header{
+	height: 560px;
+	background-image: url("../slider/slider-01.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	border-bottom: 4px solid #ff8a80;
+}
+section#top{
+	padding-top: 3em;
+}
+/*formatacao da logo utilizando a tecnica image replacement*/
+header#logo h1{
+	width: 200px; height: 82px;
+	background-image: url("../imagens/logoProDesign-header.svg");
+	background-repeat: no-repeat;
+}
+header#logo h1 a{
+	display: block;
+	height: 100%;
+	text-indent: -999999em;
+}
+/*formatacao dos formularios*/
+input[type="text"],input[type="submit"]{
+	border-style: none;
+	height: 32px;
+	vertical-align: middle;
+}
+input[type="text"]{
+	color: rgb(125,125,125);
+	width: 300px;	
+	font-size: 14px;
+	padding: 0 8px;
+}
+input[type="submit"]{
+	background-color: #f44336;
+	color: #fff;
+	width: 100px;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 0;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+}
+/*formatacao do menu*/
+section#menu nav, nav#menu-footer{
+	font-family: "Open Sans Condensed", sans-serif;
+	text-transform: uppercase;
+}
+section#menu nav ul{
+	position: absolute;bottom: 0;
+}
+section#menu nav li, nav#menu-footer li{
+	float: left;
+}
+section#menu nav li{
+	width: 203px; height: 96px;
+	background-color: #fff;
+	margin-right: 1px;
+	font-size: 32px;
+	text-align: center;
+	line-height: 96px;
+}
+section#menu nav li a{
+	text-decoration: none;
+	color: #f44336;
+	display: block; 
+	/* height:100% */
+}
+section#menu nav li a:hover,
+section#menu nav li:target a,
+section#menu nav li a:focus{
+	background-color: #f44336; color: #fff;
+}
+/* formatacao do content*/
+/* o que fazemos*/
+section#oquefazemos{
+	height: 496px;
+	background-color: #cfd8dc;
+	border-bottom: 4px solid #263238;
+}
+section#content-oquefazemos h2,
+section#content-nossaequipe h2{
+	color: #f44336;
+	font-size: 3em;
+	font-weight: 300;
+	letter-spacing: 4px;
+	padding: 1em 0;
+}
+section#content-oquefazemos section{
+	float: left;
+	width: 240px;
+	margin: 0 0.471em;
+	background-color: #fff;
+	border-bottom: 2px solid #263238;
+}
+section#content-oquefazemos section:last-child{
+	margin-right: 0;
+}
+section#content-oquefazemos section h3{
+	font-size: 14px;
+	color: #e57373;
+	text-transform: uppercase;
+	font-family: "Montserrat";
+	padding: 16px 0 2px 16px;
+}
+section#content-oquefazemos section p{
+	padding: 10px 16px;
+	line-height: 20px;
+	font-size: 13px;
+}
+/* nossa equipe*/
+section#nossaequipe{
+	height: 304px;
+}
+section#content-nossaequipe section{
+	float: left;
+	width: 320px;
+	margin-right: 1.25em;
+}
+section#content-nossaequipe section img{
+	border: 6px solid #ef5350;
+	border-radius: 50%;
+	float: left;
+	margin-right: 12px;
+}
+section#content-nossaequipe section h3,
+section#content-nossaequipe section h4,
+section#content-nossaequipe section a{
+	font-family: "Montserrat";
+	text-transform: uppercase;
+}
+section#content-nossaequipe section h3{
+	color: #e57373;
+	font-weight: 700;
+	margin: 0 0.5em;
+	font-size: 16px;
+}
+section#content-nossaequipe section h4{
+	color: #37474f;
+	font-size: 12px;
+	margin-bottom: 1.2em;
+}
+section#content-nossaequipe section p{
+	font-size: 13px;
+	line-height: 19px;
+	margin-bottom: 0.9em;
+}
+section#content-nossaequipe section a{
+	text-decoration: none;
+	color: #f44336; font-size: 13px;
+}
+section#content-nossaequipe section a span{
+	width: 16px; height: 16px;
+	background-image: url("../imagens/btn-plus.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 4px;
+}
+/* formatacao da newsletter*/
+section#newsletter{
+	height: 72px; /* 112-40 = 72px*/
+	background-color: hsl(200,30%,31%);
+	padding-top: 40px;
+}
+section#newsletter p{
+	color: rgb(225,225,225);
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+}
+section#newsletter p::before{
+	content: url("../imagens/envelope.png");
+	vertical-align: -webkit-baseline-middle;
+	vertical-align: -moz-baseline-middle;
+	vertical-align: -o-baseline-middle;
+	vertical-align: -ms-baseline-middle;
+	margin-right: 12px;
+}
+
+/* formatacao do footer*/
+div#footer{
+	height: 114px;
+	background-color: rgb(38,50,56);
+	padding-top: 2em;
+}
+section#logo-footer p{
+	width: 135px; height: 55px;
+	background: url("../imagens/logo-ProDesign-footer.svg") no-repeat;
+	background-size: cover;
+}
+section#logo-footer p a{
+	text-indent: -999999em;
+	display: block;
+	height: 100%;
+}
+section#logo-footer address{
+	color: hsl(200,17%,68%);
+	margin-top: 0.875em;
+}
+/* formatacao menu footer*/
+nav#menu-footer ul li{
+	margin-right: 15px;
+}
+nav#menu-footer ul li a{
+	color: rgb(207,216,220);
+	text-decoration: none;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+nav#menu-footer ul li a:hover{text-decoration: underline;}
+
+/* formatacao redes sociais com sprite*/
+nav#social{position: relative;}
+nav#social dl{position: absolute;right: 0;padding-top: 3em;}
+nav#social dl dd{
+	float: left;
+	width: 40px; height: 40px;
+	margin-right: 15px;
+}
+nav#social dl dd a{
+	text-indent: -99999em;
+	background-image: url("../imagens/sprite-social.png");
+	display: block; height: 100%;
+}
+nav#social dl dd:nth-child(1) a{background-position: 0 0;}
+nav#social dl dd:nth-child(2) a{background-position: -40px 0;}
+nav#social dl dd:nth-child(3) a{background-position: -80px 0;}
+nav#social dl dd:nth-child(4) a{background-position: -120px 0;}
+
+nav#social dl dd:nth-child(1) a:hover{background-position: 0 -40px;}
+nav#social dl dd:nth-child(2) a:hover{background-position: -40px -40px;}
+nav#social dl dd:nth-child(3) a:hover{background-position: -80px -40px;}
+nav#social dl dd:nth-child(4) a:hover{background-position: -120px -40px;}
